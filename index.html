@@ -85,10 +85,12 @@ body.inmenu .wrap{transform:scale(.92);opacity:.5}
 .panel{max-height:calc(100vh - 90px);overflow:auto;position:fixed;top:calc(env(safe-area-inset-top,0px) + 64px);right:12px;z-index:5;background:#1a0a0d;border:3px solid var(--brass);border-radius:12px;padding:14px 16px;width:min(300px,calc(100vw - 24px));font-size:18px}
 .panel[hidden]{display:none}
 .panel h2{margin:0 0 10px;font-size:20px;color:var(--brass3)}
-.panel label{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer}
+.panel label{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer}.panel label[hidden]{display:none}
 .panel input{width:22px;height:22px;accent-color:var(--brass)}
 .panel h3{margin:12px 0 6px;font-size:17px;color:#cdb98a}
 .panel p{margin:10px 0 0;font-size:15px;color:#cdb98a}
+.catalogopen{width:100%;margin:12px 0 2px;padding:9px 12px;border:2px solid var(--brass);border-radius:9px;background:#6f1720;color:#fff;font:700 18px "Barlow Condensed",sans-serif;cursor:pointer}.catalogopen[hidden]{display:none}
+.catalogview{position:fixed;inset:0;z-index:24;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(12,3,8,.96)}.catalogview[hidden]{display:none}.catalogbox{width:min(1050px,100%);height:min(90vh,900px);display:flex;flex-direction:column;background:#1a0a0d;border:4px solid var(--brass);border-radius:16px;padding:20px;color:#f1dfb5}.cataloghead{display:flex;align-items:center;justify-content:space-between;gap:12px}.cataloghead h2{margin:0;color:var(--brass3);font-family:"Bowlby One",Impact,sans-serif}.catalogsearch{width:100%;margin:14px 0;padding:10px 12px;border:2px solid var(--brass2);border-radius:8px;background:#fff8e8;color:var(--ink);font:700 18px "Barlow Condensed",sans-serif}.catalogsummary{margin:0 0 10px;color:#cdb98a}.cataloglist{flex:1;overflow:auto;padding-right:8px;scrollbar-width:thin;scrollbar-color:var(--brass) #2b1116}.cataloglist::-webkit-scrollbar{width:12px}.cataloglist::-webkit-scrollbar-track{background:#2b1116;border-radius:10px}.cataloglist::-webkit-scrollbar-thumb{background:linear-gradient(var(--brass3),var(--brass2));border:2px solid #2b1116;border-radius:10px}.catalogcat{margin:0 0 12px;border:1px solid var(--brass2);border-radius:10px;overflow:hidden}.catalogcat summary{display:flex;align-items:center;gap:10px;padding:10px 13px;background:#321019;color:var(--brass3);font-size:20px;font-weight:700;cursor:pointer}.catalogtitle{flex:1}.topiccontrol{display:flex;align-items:center;gap:7px;color:#f1dfb5;font-size:16px;cursor:pointer}.topiccontrol input{width:20px;height:20px;accent-color:var(--brass)}.topiccontrol.off{opacity:.55}.catalogitem{padding:10px 13px;border-top:1px solid rgba(217,164,65,.25)}.catalogitem h4{margin:0 0 5px;color:#fff1c9;font-size:18px}.catalogitem p{margin:0;color:#d9cba9;line-height:1.35}.catalogclose{background:var(--brass);color:var(--ink);border:0;border-radius:8px;padding:8px 14px;font:700 18px "Barlow Condensed",sans-serif;cursor:pointer}
 .auth{position:fixed;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;padding:16px;background:radial-gradient(ellipse at center,#3c0a1e,#0c0308)}
 .auth[hidden]{display:none}.authbox{width:min(420px,100%);margin:0 auto;background:#1a0a0d;border:4px solid var(--brass);border-radius:16px;padding:24px;text-align:center;box-shadow:0 18px 50px #000}
 .authbox h2{font-family:"Bowlby One",Impact,sans-serif;color:var(--brass3);font-size:32px;margin:0 0 18px}.authbox label{display:block;text-align:left;color:#f1dfb5;font-size:19px;margin:12px 0 5px}
@@ -98,8 +100,10 @@ body.inmenu .wrap{transform:scale(.92);opacity:.5}
 .logout{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:122px;z-index:5;height:46px;padding:0 14px;border-radius:999px;border:3px solid var(--brass);background:#1a0a0d;color:var(--brass3);font:700 18px "Barlow Condensed",sans-serif;cursor:pointer}
 .adminbtn{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:66px;z-index:5;width:46px;height:46px;border-radius:50%;border:3px solid var(--brass);background:#1a0a0d;color:var(--brass3);font-size:22px;cursor:pointer}.adminbtn[hidden]{display:none}
 .adminview{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(12,3,8,.94)}.adminview[hidden]{display:none}
-.adminbox{width:min(900px,100%);max-height:90vh;overflow:auto;background:#1a0a0d;border:4px solid var(--brass);border-radius:16px;padding:20px;color:#f1dfb5}.adminbox h2{font-family:"Bowlby One",Impact,sans-serif;color:var(--brass3);margin:0 0 8px}.adminbox ol{padding-left:1.5em}.adminbox li{padding:7px 4px;border-bottom:1px solid rgba(217,164,65,.3)}.adminbox .empty{color:#cdb98a}.adminclose{float:right;background:var(--brass);color:var(--ink);border:0;border-radius:8px;padding:8px 14px;font:700 18px "Barlow Condensed",sans-serif;cursor:pointer}
+.adminbox{width:min(900px,100%);max-height:90vh;overflow:auto;scrollbar-width:thin;scrollbar-color:var(--brass) #2b1116;background:#1a0a0d;border:4px solid var(--brass);border-radius:16px;padding:20px;color:#f1dfb5}.adminbox::-webkit-scrollbar{width:12px}.adminbox::-webkit-scrollbar-track{background:#2b1116;border-radius:10px}.adminbox::-webkit-scrollbar-thumb{background:linear-gradient(var(--brass3),var(--brass2));border:2px solid #2b1116;border-radius:10px}.adminbox::-webkit-scrollbar-thumb:hover{background:var(--brass3)}.adminbox h2{font-family:"Bowlby One",Impact,sans-serif;color:var(--brass3);margin:0 0 8px}.adminbox ol{padding-left:1.5em}.adminbox li{padding:7px 4px;border-bottom:1px solid rgba(217,164,65,.3)}.adminbox .empty{color:#cdb98a}.adminclose{float:right;background:var(--brass);color:var(--ink);border:0;border-radius:8px;padding:8px 14px;font:700 18px "Barlow Condensed",sans-serif;cursor:pointer}
 .resetbox{margin:14px 0;padding:12px;border:2px solid var(--brass2);border-radius:10px}.resetbox h3{margin:0 0 8px;color:var(--brass3)}.resetrow{display:flex;flex-wrap:wrap;gap:8px}.resetpass{background:#7d0f17;color:#fff;border:2px solid var(--brass);border-radius:8px;padding:8px 14px;font:700 17px "Barlow Condensed",sans-serif;cursor:pointer}.resetmsg{min-height:20px;margin:8px 0 0;color:#7dff9f}
+.historyrow{display:flex;align-items:flex-start;gap:10px}.historytext{flex:1}.deletehistory{flex:0 0 auto;background:#7d0f17;color:#fff;border:1px solid var(--brass);border-radius:7px;padding:5px 9px;font:700 15px "Barlow Condensed",sans-serif;cursor:pointer}.deletehistory.confirm{background:#c72d25}
+.adminsettings{display:flex;flex-wrap:wrap;gap:10px}.adminsettings label{display:flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--brass2);border-radius:8px;background:#250d12;cursor:pointer}.adminsettings input{width:20px;height:20px;accent-color:var(--brass)}
 .gear:focus-visible,.go:focus-visible,.lever:focus-visible,.panel input:focus-visible{outline:3px solid #fff;outline-offset:3px}
 @media (prefers-reduced-motion:reduce){.lever .rod,.lever .knob{transition:none}.win.spin span{filter:none}}
 @media (max-width:520px){.lever{display:none}.cab{width:100%;padding:12px 10px 0}.tray{margin:0 -10px}.ctrl{flex-wrap:wrap;justify-content:center}}
@@ -166,6 +170,11 @@ body.inmenu .wrap{transform:scale(.92);opacity:.5}
       </div>
       <p class="resetmsg" id="resetmsg"></p>
     </div>
+    <div class="resetbox">
+      <h3>Losowanie tylko siebie</h3>
+      <div class="adminsettings" id="selfonlyadmin"></div>
+      <p class="resetmsg" id="selfonlymsg">Ustawienie działa na wszystkich urządzeniach.</p>
+    </div>
     <p id="adminsummary"></p>
     <ol id="adminhistory"></ol>
   </section>
@@ -173,12 +182,19 @@ body.inmenu .wrap{transform:scale(.92);opacity:.5}
 <div class="panel" id="panel" hidden>
   <h2>Ustawienia</h2>
   <label for="sn">Dźwięk <input type="checkbox" id="sn" checked></label>
-  <label for="selfonly">Losuj tylko siebie <input type="checkbox" id="selfonly" checked></label>
-  <h3>Tematy w losowaniu</h3>
-  <div id="tl"></div>
+  <label for="selfonly" id="selfonlyrow">Losuj tylko siebie <input type="checkbox" id="selfonly" checked></label>
+  <button class="catalogopen" id="catalogbtn" type="button" hidden>Wszystkie zagadnienia i podpowiedzi</button>
   <h3>Imiona w losowaniu</h3>
   <div id="nl"></div>
-  <p>Zaznaczone pozycje biorą udział w losowaniu. Zmiana dotyczy kolejnych losowań. Co najmniej jeden temat musi zostać włączony. Gdy odznaczysz wszystkie imiona, bęben z imieniem znika.</p>
+  <p>Gdy odznaczysz wszystkie imiona, bęben z imieniem znika. Tematami zarządza Hubert w katalogu zagadnień.</p>
+</div>
+<div class="catalogview" id="catalogview" hidden>
+  <section class="catalogbox">
+    <div class="cataloghead"><h2>Katalog zagadnień</h2><button class="catalogclose" id="catalogclose" type="button">Zamknij</button></div>
+    <input class="catalogsearch" id="catalogsearch" type="search" placeholder="Szukaj tematu, zagadnienia lub podpowiedzi...">
+    <p class="catalogsummary" id="catalogsummary"></p>
+    <div class="cataloglist" id="cataloglist"></div>
+  </section>
 </div>
 <main class="wrap">
   <div class="cab" id="cab">
@@ -216,6 +232,9 @@ const DATA=Object.fromEntries(Object.entries({
 "Filozofia":`Czym jest filozofia?|Sokrates i metoda zadawania pytań|Platońska alegoria jaskini|Arystoteles i etyka cnót|Stoicyzm – jak radzić sobie z przeciwnościami?|Epikureizm – czym jest dobre życie?|Sceptycyzm filozoficzny|Święty Augustyn i problem zła|Tomasz z Akwinu – wiara i rozum|Kartezjusz – skąd wiemy, że istniejemy?|John Locke i źródła wiedzy|David Hume i granice poznania|Immanuel Kant i obowiązek moralny|Utylitaryzm – największe szczęście największej liczby|John Stuart Mill i wolność jednostki|Friedrich Nietzsche i przewartościowanie wartości|Egzystencjalizm Jean-Paula Sartre'a|Absurd według Alberta Camusa|Hannah Arendt i banalność zła|Filozofia dialogu|Problem wolnej woli|Czy człowiek ma niezmienną tożsamość?|Czym jest świadomość?|Problem umysłu i ciała|Czy maszyna może myśleć?|Etyka sztucznej inteligencji|Dylemat wagonika|Czy cel uświęca środki?|Czym jest sprawiedliwość?|Czy istnieje prawda obiektywna?|Relatywizm moralny|Problem cierpienia|Sens życia|Czy śmierć nadaje życiu znaczenie?|Czym jest piękno?|Filozofia nauki|Paradoks statku Tezeusza|Paradoksy Zenona|Umowa społeczna|Czy nieposłuszeństwo obywatelskie jest moralne?`,
 "Polityka":`Czym jest państwo?|Demokracja bezpośrednia i przedstawicielska|Trójpodział władzy|Konstytucja i jej znaczenie|Jak działają wybory?|Ordynacja większościowa i proporcjonalna|Partie polityczne|Lewica, prawica i centrum|Liberalizm|Konserwatyzm|Socjalizm|Nacjonalizm|Populizm|Autorytaryzm i totalitaryzm|Państwo prawa|Prawa człowieka|Wolność słowa i jej granice|Rola mediów w polityce|Dezinformacja polityczna|Propaganda polityczna|Lobbing|Samorząd terytorialny|Jak powstaje ustawa?|Rola prezydenta|Rola parlamentu|Rola rządu|Sądy i niezależność sądownictwa|Unia Europejska – instytucje i działanie|NATO – cele i zasada obrony zbiorowej|Organizacja Narodów Zjednoczonych|Dyplomacja|Sankcje międzynarodowe|Polityka zagraniczna|Geopolityka|Bezpieczeństwo energetyczne|Migracja i polityka migracyjna|Podatki i wydatki publiczne|Państwo opiekuńcze|Społeczeństwo obywatelskie|Jak rozpoznawać manipulację polityczną?`,
 "Sztuka":`Czym jest sztuka?|Renesans i odkrycie perspektywy|Leonardo da Vinci|Michał Anioł|Barok – ruch, światło i dramat|Caravaggio i światłocień|Rembrandt|Klasycyzm|Romantyzm w malarstwie|Realizm w sztuce|Impresjonizm|Claude Monet|Vincent van Gogh|Postimpresjonizm|Ekspresjonizm|Kubizm|Pablo Picasso|Surrealizm|Salvador Dalí|Abstrakcja w sztuce|Dadaizm|Pop-art|Andy Warhol|Street art|Banksy|Sztuka konceptualna|Minimalizm|Performance|Fotografia jako sztuka|Historia plakatu|Polska szkoła plakatu|Architektura modernistyczna|Bauhaus|Architektura brutalistyczna|Art déco|Secesja|Jak czytać obraz?|Symbolika kolorów w sztuce|Fałszerstwa dzieł sztuki|Sztuka tworzona cyfrowo`
+,
+"Anatomia człowieka":`Budowa komórki człowieka|Tkanki ludzkiego organizmu|Skóra i jej funkcje|Układ kostny|Budowa kości|Kręgosłup i jego odcinki|Czaszka|Klatka piersiowa|Kości kończyny górnej|Kości kończyny dolnej|Rodzaje stawów|Staw kolanowy|Staw biodrowy|Staw barkowy|Mięśnie szkieletowe|Jak działa skurcz mięśnia?|Mięśnie kończyny górnej|Mięśnie kończyny dolnej|Mięśnie brzucha|Mięśnie grzbietu|Przepona i oddychanie|Serce – budowa i praca|Krążenie małe i duże|Tętnice, żyły i naczynia włosowate|Krew i jej skład|Układ limfatyczny|Płuca i drogi oddechowe|Wymiana gazowa w płucach|Jama ustna i zęby|Przełyk i żołądek|Jelito cienkie i grube|Wątroba|Trzustka|Nerki i układ moczowy|Mózg i jego części|Rdzeń kręgowy|Nerwy obwodowe|Autonomiczny układ nerwowy|Oko i mechanizm widzenia|Ucho i mechanizm słyszenia|Zmysł równowagi|Układ hormonalny|Tarczyca|Przysadka mózgowa|Nadnercza|Układ rozrodczy kobiety|Układ rozrodczy mężczyzny|Odporność człowieka|Anatomia dłoni|Anatomia stopy`,
+"Sport":`Historia igrzysk olimpijskich|Nowożytne igrzyska olimpijskie|Lekkoatletyka – konkurencje i rekordy|Bieg maratoński|Sprint na 100 metrów|Skok wzwyż|Skok o tyczce|Rzut oszczepem|Piłka nożna – zasady i taktyka|Historia mistrzostw świata w piłce nożnej|Liga Mistrzów UEFA|Rola bramkarza w piłce nożnej|Koszykówka – zasady i pozycje|Historia NBA|Rzut za trzy punkty|Siatkówka – zasady i ustawienia|Libero w siatkówce|Piłka ręczna|Tenis – zasady i nawierzchnie|Turnieje Wielkiego Szlema|Tenis stołowy|Badminton|Hokej na lodzie|Rugby|Futbol amerykański|Baseball|Kolarstwo szosowe|Tour de France|Kolarstwo torowe|Pływanie sportowe|Skoki narciarskie|Biegi narciarskie|Narciarstwo alpejskie|Snowboard|Łyżwiarstwo szybkie|Formuła 1|Rajdy samochodowe|Wyścigi motocyklowe|Boks – zasady i style|Mieszane sztuki walki (MMA)|Judo|Zapasy|Szermierka|Gimnastyka sportowa|Wspinaczka sportowa|Triathlon|Sporty siłowe|Trening wytrzymałościowy|Regeneracja w sporcie|Doping i walka z dopingiem`
 }).map(([k,v])=>[k,v.split("|")]));
 const DESC=Object.fromEntries(Object.entries({
 "Socjologia":`Najpierw mała prośba, potem większa – łatwiej się zgodzić|Najpierw absurdalnie duża prośba, potem „skromniejsza" łatwiej przechodzi|Kuszenie niską ceną, a potem dokładanie ukrytych kosztów|Coś wydaje się lepsze lub gorsze w zestawieniu z czymś innym|Czujemy, że trzeba się odwdzięczyć za przysługę lub prezent|To, czego jest mało, wydaje się cenniejsze|Robimy to, co robią inni|Bezkrytycznie słuchamy ekspertów i osób z autorytetem|Łatwiej ulegamy osobom, które lubimy|Dążymy do zgodności z własnymi wcześniejszymi deklaracjami|Wmawianie ofierze, że źle pamięta lub przesadza|Zalewanie uczuciem na początku, by uzależnić emocjonalnie|Karanie drugiej osoby ignorowaniem i brakiem kontaktu|Wciąganie trzeciej osoby do konfliktu dwojga ludzi|Przerzucanie własnych wad i winy na innych|Wpędzanie w wyrzuty sumienia, by coś wymusić|Groźba utraty uczuć lub wsparcia, by kogoś zmusić|Poniżanie, kontrola i zastraszanie bez użycia siły fizycznej|Systematyczne ograniczanie wolności partnera|Odcinanie od rodziny i znajomych|Lęk przed przegapieniem okazji napędza zakupy|Napis „ostatnie sztuki" wymuszający szybki zakup|Pierwsza podana liczba wpływa na ocenę kolejnych|Ten sam fakt inaczej przedstawiony zmienia ocenę|Projekt aplikacji, który podstępem wymusza niechciane decyzje|Planowe, masowe wpływanie na opinie|Jak sekty pozyskują i wiążą nowych członków|Czy da się całkowicie zmienić czyjeś poglądy|Dostosowywanie się do większości|Badanie, jak ludzie przyznają rację błędnej grupie|Badanie posłuszeństwa wobec autorytetu|Badanie ról strażnik–więzień i jego krytyka|Przesadny lęk społeczny przed rzekomym zagrożeniem|Osoby w mniejszości milkną ze strachu przed izolacją|Popieramy to, co jest popularne|Algorytmy pokazują tylko treści zgodne z naszymi poglądami|Środowisko, w którym słychać tylko własne poglądy|Naznaczanie osób negatywną etykietą|Przypinanie łatek, które zmieniają zachowanie|Wiara, że coś się stanie, sprawia, że się staje|Brak norm i poczucie rozpadu zasad|Uczenie się zasad życia w społeczeństwie|Wartość relacji i wzajemnego zaufania|Podział społeczeństwa na warstwy|Zamożni wypierają dawnych mieszkańców dzielnicy|Grupy z własnym stylem i wartościami|Ruch przeciwstawiający się dominującym normom|Publiczny bojkot osób za wypowiedzi lub czyny|Zaniedbanie zachęca do kolejnych wykroczeń|Niewidzialna bariera awansu dla wybranych grup`,
@@ -231,7 +250,7 @@ const DESC=Object.fromEntries(Object.entries({
 "Polityka":`Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Czym jest państwo?|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Demokracja bezpośrednia i przedstawicielska|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Trójpodział władzy|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Konstytucja i jej znaczenie|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Jak działają wybory?|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Ordynacja większościowa i proporcjonalna|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Partie polityczne|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Lewica, prawica i centrum|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Liberalizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Konserwatyzm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Socjalizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Nacjonalizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Populizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Autorytaryzm i totalitaryzm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Państwo prawa|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Prawa człowieka|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Wolność słowa i jej granice|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Rola mediów w polityce|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Dezinformacja polityczna|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Propaganda polityczna|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Lobbing|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Samorząd terytorialny|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Jak powstaje ustawa?|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Rola prezydenta|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Rola parlamentu|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Rola rządu|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Sądy i niezależność sądownictwa|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Unia Europejska – instytucje i działanie|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: NATO – cele i zasada obrony zbiorowej|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Organizacja Narodów Zjednoczonych|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Dyplomacja|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Sankcje międzynarodowe|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Polityka zagraniczna|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Geopolityka|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Bezpieczeństwo energetyczne|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Migracja i polityka migracyjna|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Podatki i wydatki publiczne|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Państwo opiekuńcze|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Społeczeństwo obywatelskie|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Jak rozpoznawać manipulację polityczną?`,
 "Sztuka":`Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Czym jest sztuka?|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Renesans i odkrycie perspektywy|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Leonardo da Vinci|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Michał Anioł|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Barok – ruch, światło i dramat|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Caravaggio i światłocień|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Rembrandt|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Klasycyzm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Romantyzm w malarstwie|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Realizm w sztuce|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Impresjonizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Claude Monet|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Vincent van Gogh|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Postimpresjonizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Ekspresjonizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Kubizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Pablo Picasso|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Surrealizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Salvador Dalí|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Abstrakcja w sztuce|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Dadaizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Pop-art|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Andy Warhol|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Street art|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Banksy|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Sztuka konceptualna|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Minimalizm|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Performance|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Fotografia jako sztuka|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Historia plakatu|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Polska szkoła plakatu|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Architektura modernistyczna|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Bauhaus|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Architektura brutalistyczna|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Art déco|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Secesja|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Jak czytać obraz?|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Symbolika kolorów w sztuce|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Fałszerstwa dzieł sztuki|Przedstaw najważniejsze informacje, kontekst i konkretny przykład dotyczący zagadnienia: Sztuka tworzona cyfrowo`
 }).map(([k,v])=>[k,v.split("|")]));
-const NEW_TOPIC_GROUPS=new Set(["Militaria","Historia","Fizyka","Filozofia","Polityka","Sztuka"]);
+const NEW_TOPIC_GROUPS=new Set(["Militaria","Historia","Fizyka","Filozofia","Polityka","Sztuka","Anatomia człowieka","Sport"]);
 const LOOSE_HINT={
   "Socjologia":"Możesz odwołać się do codziennej sytuacji, eksperymentu, mediów albo własnej obserwacji.",
   "Medycyna":"Możesz wspomnieć o działaniu organizmu, objawach, zapobieganiu albo ciekawym przypadku.",
@@ -244,7 +263,9 @@ const LOOSE_HINT={
   "Fizyka":"Możesz pokazać prosty przykład, doświadczenie, zastosowanie albo ciekawostkę.",
   "Filozofia":"Możesz rozważyć główną ideę, własny przykład albo różne punkty widzenia.",
   "Polityka":"Możesz odwołać się do sposobu działania, wpływu na ludzi albo wybranego przykładu.",
-  "Sztuka":"Możesz spojrzeć na styl, twórcę, epokę albo wybrane dzieło — kierunek jest dowolny."
+  "Sztuka":"Możesz spojrzeć na styl, twórcę, epokę albo wybrane dzieło — kierunek jest dowolny.",
+  "Anatomia człowieka":"Możesz skupić się na budowie, funkcji, współpracy z innymi częściami ciała albo ciekawostce.",
+  "Sport":"Możesz zahaczyć o zasady, historię, technikę, znanych zawodników albo ważne wydarzenie."
 };
 const DESCRIPTION_FIXES={
   "Socjologia::Dowód społeczny":"Skłonność do uznawania zachowania innych ludzi za wskazówkę, co jest właściwe lub bezpieczne",
@@ -303,7 +324,7 @@ const bags={};function bag(n){let b=bags[n];if(!b||!b.length){b=bags[n]=PH[n].sl
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 const $=id=>document.getElementById(id);
 const API_URL="https://ujsunglauybyrvslfytg.supabase.co/functions/v1/game-api";
-let currentUser=null,sessionToken=sessionStorage.getItem("bandyta_token")||"",profiles={Hubert:true,Bartek:false};
+let currentUser=null,sessionToken=sessionStorage.getItem("bandyta_token")||"",profiles={Hubert:true,Bartek:false},selfOnlyEnabled=false,disabledTopics=[];
 async function api(action,payload={}){
   const response=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({action,...payload})});
   let data={};try{data=await response.json()}catch(e){}
@@ -323,22 +344,25 @@ function updateLoginMode(){
   $("authmsg").textContent=exists?"Wpisz hasło do profilu.":"Przy pierwszym wejściu ustaw hasło dla wybranego profilu.";
   $("authmsg").classList.remove("autherr");
 }
-function finishLogin(name,token=sessionToken){
+function finishLogin(name,token=sessionToken,initialSelfOnly=null){
   currentUser=name;sessionToken=token;sessionStorage.setItem("bandyta_user",name);sessionStorage.setItem("bandyta_token",token);$("auth").hidden=true;
   $("adminbtn").hidden=name!=="Hubert";$("logout").textContent="Wyloguj: "+name;
-  $("selfonly").checked=localStorage.getItem("bandyta_selfonly_"+name)!=="0";
-  updateNameMode();
+  $("catalogbtn").hidden=false;
+  $("selfonlyrow").hidden=name!=="Hubert";
+  if(typeof initialSelfOnly==="boolean"){selfOnlyEnabled=initialSelfOnly;$("selfonly").checked=initialSelfOnly;updateNameMode()}
+  loadProfileSettings();
+  loadGameSettings();
 }
 $("profile").onchange=updateLoginMode;
 $("authform").onsubmit=async e=>{
   e.preventDefault();const name=$("profile").value,password=$("password").value;
   if(password.length<4){$("authmsg").textContent="Hasło musi mieć co najmniej 4 znaki.";$("authmsg").classList.add("autherr");return}
   $("loginbtn").disabled=true;$("authmsg").textContent="Logowanie...";$("authmsg").classList.remove("autherr");
-  try{const data=await api("login",{name,password});profiles[name]=true;$("password").value="";finishLogin(data.user,data.token)}
+  try{const data=await api("login",{name,password});profiles[name]=true;$("password").value="";finishLogin(data.user,data.token,data.selfOnly)}
   catch(err){$("authmsg").textContent=err.message;$("authmsg").classList.add("autherr");$("password").select()}
   finally{$("loginbtn").disabled=false}
 };
-$("logout").onclick=()=>{const old=sessionToken;currentUser=null;sessionToken="";sessionStorage.removeItem("bandyta_user");sessionStorage.removeItem("bandyta_token");$("adminview").hidden=true;$("auth").hidden=false;$("password").value="";updateLoginMode();api("logout",{token:old}).catch(()=>{})};
+$("logout").onclick=()=>{const old=sessionToken;currentUser=null;sessionToken="";selfOnlyEnabled=false;sessionStorage.removeItem("bandyta_user");sessionStorage.removeItem("bandyta_token");$("adminview").hidden=true;$("catalogview").hidden=true;$("catalogbtn").hidden=true;$("auth").hidden=false;$("password").value="";updateLoginMode();api("logout",{token:old}).catch(()=>{})};
 updateLoginMode();
 loadProfiles();
 const w=[0,1,2].map(i=>$("w"+i)), go=$("go"), lever=$("lever"), res=$("res"), cab=$("cab"), reels=$("reels"), panel=$("panel"), gear=$("gear");
@@ -354,20 +378,60 @@ async function renderFullHistory(){
   list.innerHTML="";summary.textContent="Ładowanie historii...";
   try{
     const data=await api("history",{token:sessionToken});
-    fullHistory=data.history.map(x=>({time:x.created_at,user:x.user_name,topic:x.topic,issue:x.issue,name:x.result_name}));
+    fullHistory=data.history.map(x=>({id:x.id,time:x.created_at,user:x.user_name,topic:x.topic,issue:x.issue,name:x.result_name}));
   }catch(err){summary.textContent=err.message;return}
   list.innerHTML=""; summary.textContent="Łącznie zapisanych losowań: "+fullHistory.length;
   if(!fullHistory.length){const li=document.createElement("li");li.className="empty";li.textContent="Brak zapisanych losowań.";list.append(li);return}
   fullHistory.forEach(entry=>{
     const li=document.createElement("li"),date=new Date(entry.time);
-    li.textContent=date.toLocaleString("pl-PL")+" — losował: "+(entry.user||"Nieznany")+" — "+entry.topic+" — "+entry.issue+" — wynik: "+entry.name;
-    list.append(li);
+    li.className="historyrow";
+    const text=document.createElement("span"),button=document.createElement("button");
+    text.className="historytext";text.textContent=date.toLocaleString("pl-PL")+" — losował: "+(entry.user||"Nieznany")+" — "+entry.topic+" — "+entry.issue+" — wynik: "+entry.name;
+    button.type="button";button.className="deletehistory";button.textContent="Usuń";
+    button.onclick=async()=>{
+      if(button.dataset.confirm!=="1"){button.dataset.confirm="1";button.classList.add("confirm");button.textContent="Potwierdź usunięcie";return}
+      button.disabled=true;
+      try{await api("deleteSpin",{token:sessionToken,id:entry.id});await renderFullHistory()}
+      catch(err){button.disabled=false;button.textContent=err.message}
+    };
+    li.append(text,button);list.append(li);
   });
 }
 try{off=JSON.parse(localStorage.getItem("bandyta_off")||"[]")}catch(e){off=[]}
 const nl=$("nl"), sn=$("sn"),selfOnly=$("selfonly");
-function updateNameMode(){nl.style.opacity=selfOnly.checked?".45":"1";nl.style.pointerEvents=selfOnly.checked?"none":"auto"}
-selfOnly.onchange=()=>{if(currentUser)localStorage.setItem("bandyta_selfonly_"+currentUser,selfOnly.checked?"1":"0");updateNameMode()};
+function updateNameMode(){const active=!!selfOnlyEnabled;nl.style.opacity=active?".45":"1";nl.style.pointerEvents=active?"none":"auto"}
+function renderSelfOnlyAdmin(items){
+  const box=$("selfonlyadmin");box.innerHTML="";
+  items.forEach(item=>{
+    const label=document.createElement("label"),cb=document.createElement("input"),span=document.createElement("span");
+    cb.type="checkbox";cb.checked=item.selfOnly;span.textContent=item.name;
+    cb.onchange=async()=>{
+      cb.disabled=true;$("selfonlymsg").textContent="Zapisywanie...";
+      try{
+        await api("setSelfOnly",{token:sessionToken,target:item.name,enabled:cb.checked});
+        if(item.name===currentUser){selfOnlyEnabled=cb.checked;selfOnly.checked=cb.checked;updateNameMode()}
+        $("selfonlymsg").textContent="Zapisano ustawienie dla profilu "+item.name+".";
+      }catch(err){cb.checked=!cb.checked;$("selfonlymsg").textContent=err.message}
+      cb.disabled=false;
+    };
+    label.append(cb,span);box.append(label);
+  });
+}
+async function loadProfileSettings(){
+  if(!sessionToken)return;
+  try{
+    const data=await api("profileSettings",{token:sessionToken}),mine=data.profiles.find(p=>p.name===currentUser);
+    if(mine){selfOnlyEnabled=mine.selfOnly;selfOnly.checked=mine.selfOnly;updateNameMode()}
+    if(currentUser==="Hubert")renderSelfOnlyAdmin(data.profiles);
+  }catch(err){if(currentUser==="Hubert")$("selfonlymsg").textContent=err.message}
+}
+selfOnly.onchange=async()=>{
+  if(currentUser!=="Hubert"){selfOnly.checked=selfOnlyEnabled;return}
+  selfOnly.disabled=true;
+  try{await api("setSelfOnly",{token:sessionToken,target:"Hubert",enabled:selfOnly.checked});selfOnlyEnabled=selfOnly.checked;updateNameMode();loadProfileSettings()}
+  catch(err){selfOnly.checked=selfOnlyEnabled}
+  selfOnly.disabled=false;
+};
 const rememberedUser=sessionStorage.getItem("bandyta_user");
 if(rememberedUser&&sessionToken)finishLogin(rememberedUser,sessionToken);
 try{if(localStorage.getItem("bandyta_snd")==="0"){soundOn=false;sn.checked=false}}catch(e){}
@@ -381,27 +445,61 @@ NAMES.forEach(name=>{
   };
   lab.append(span,cb); nl.append(lab);
 });
-let offT=[];
-try{offT=JSON.parse(localStorage.getItem("bandyta_offT")||"[]")}catch(e){offT=[]}
-const tl=$("tl");
-topics.forEach(tp=>{
-  const lab=document.createElement("label"),span=document.createElement("span"),cb=document.createElement("input");
-  span.textContent=tp;cb.type="checkbox";cb.checked=!offT.includes(tp);
-  cb.onchange=()=>{
-    if(!cb.checked&&topics.filter(x=>!offT.includes(x)).length<=1){cb.checked=true;return}
-    offT=cb.checked?offT.filter(x=>x!==tp):offT.concat(tp);
-    try{localStorage.setItem("bandyta_offT",JSON.stringify(offT))}catch(e){}
-  };
-  lab.append(span,cb);tl.append(lab);
-});
+async function loadGameSettings(){
+  if(!sessionToken)return;
+  try{const data=await api("gameSettings",{token:sessionToken});disabledTopics=(data.disabledTopics||[]).filter(x=>topics.includes(x))}
+  catch(err){console.error("Nie pobrano ustawień tematów:",err)}
+}
 gear.onclick=()=>{panel.hidden=!panel.hidden;gear.setAttribute("aria-expanded",String(!panel.hidden))};
+function renderCatalog(query=""){
+  const list=$("cataloglist"),needle=query.trim().toLocaleLowerCase("pl-PL");
+  const word=(n,one,few,many)=>n===1?one:(n%10>=2&&n%10<=4&&(n%100<12||n%100>14)?few:many);
+  let shown=0,total=0,shownCategories=0;
+  list.innerHTML="";
+  topics.forEach((category,categoryIndex)=>{
+    const entries=DATA[category].map((issue,index)=>({issue,hint:DESC[category][index]||""}));
+    total+=entries.length;
+    const matches=entries.filter(entry=>(category+" "+entry.issue+" "+entry.hint).toLocaleLowerCase("pl-PL").includes(needle));
+    if(!matches.length)return;
+    shown+=matches.length;shownCategories++;
+    const group=document.createElement("details"),summary=document.createElement("summary"),title=document.createElement("span"),control=document.createElement("label"),toggle=document.createElement("input"),state=document.createElement("span");
+    group.className="catalogcat";group.open=!!needle||categoryIndex===0;
+    title.className="catalogtitle";title.textContent=category+" ("+matches.length+")";
+    summary.append(title);
+    if(currentUser==="Hubert"){
+      control.className="topiccontrol"+(disabledTopics.includes(category)?" off":"");toggle.type="checkbox";toggle.checked=!disabledTopics.includes(category);state.textContent=toggle.checked?"W losowaniu":"Wyłączony";
+      control.onclick=e=>e.stopPropagation();
+      toggle.onchange=async()=>{
+        if(!toggle.checked&&topics.filter(x=>!disabledTopics.includes(x)).length<=1){toggle.checked=true;return}
+        toggle.disabled=true;const previous=disabledTopics.slice();
+        disabledTopics=toggle.checked?disabledTopics.filter(x=>x!==category):[...new Set([...disabledTopics,category])];
+        state.textContent=toggle.checked?"W losowaniu":"Wyłączony";control.classList.toggle("off",!toggle.checked);
+        try{await api("setDisabledTopics",{token:sessionToken,disabledTopics})}
+        catch(err){disabledTopics=previous;toggle.checked=!toggle.checked;state.textContent=toggle.checked?"W losowaniu":"Wyłączony";control.classList.toggle("off",!toggle.checked)}
+        toggle.disabled=false;
+      };
+      control.append(toggle,state);summary.append(control);
+    }
+    group.append(summary);
+    matches.forEach(entry=>{
+      const item=document.createElement("article"),title=document.createElement("h4"),hint=document.createElement("p");
+      item.className="catalogitem";title.textContent=entry.issue;hint.textContent=entry.hint||"Brak podpowiedzi.";
+      item.append(title,hint);group.append(item);
+    });
+    list.append(group);
+  });
+  $("catalogsummary").textContent=needle
+    ?"Znaleziono: "+shown+" "+word(shown,"zagadnienie","zagadnienia","zagadnień")+" w "+shownCategories+" "+word(shownCategories,"temacie","tematach","tematach")+"."
+    :topics.length+" tematów • "+total+" zagadnień";
+  if(!shown){const empty=document.createElement("p");empty.className="empty";empty.textContent="Nie znaleziono pasujących zagadnień.";list.append(empty)}
+}
 function spin(){
   if(busy)return; A(); snd.pull(); busy=true; go.disabled=true; panel.hidden=true; gear.setAttribute("aria-expanded","false");
   lever.classList.add("pulled"); setTimeout(()=>lever.classList.remove("pulled"),300);
   cab.classList.add("run");
-  const active=selfOnly.checked&&currentUser?[currentUser]:NAMES.filter(x=>!off.includes(x)), n=active.length>0, cols=n?3:2;
+  const active=selfOnlyEnabled&&currentUser?[currentUser]:NAMES.filter(x=>!off.includes(x)), n=active.length>0, cols=n?3:2;
   reels.classList.toggle("two",!n);
-  const aT=topics.filter(x=>!offT.includes(x)), tp=aT.length?aT:topics;
+  const aT=topics.filter(x=>!disabledTopics.includes(x)), tp=aT.length?aT:topics;
   const t=pick(tp), ix=Math.floor(Math.random()*DATA[t].length), out=[t,DATA[t][ix],n?pick(active):""], dsc=DESC[t][ix]||"";
   const pools=[tp,[].concat(...tp.map(x=>DATA[x])),active], stops=fast?[100,200,300]:[1000,1900,2800];
   res.textContent="Losowanie..."; $("rd").textContent="";
@@ -427,8 +525,12 @@ go.onclick=spin; lever.onclick=spin;
 const menu=$("menu"),mm=$("mm"),rr=$("rr");
 $("play").onclick=()=>{A();menu.classList.add("up");document.body.classList.remove("inmenu");go.focus({preventScroll:true})};
 $("rules").onclick=()=>{mm.hidden=true;rr.hidden=false};
-$("adminbtn").onclick=()=>{if(currentUser!=="Hubert")return;$("adminview").hidden=false;renderFullHistory()};
+$("adminbtn").onclick=()=>{if(currentUser!=="Hubert")return;$("adminview").hidden=false;renderFullHistory();loadProfileSettings()};
 $("adminclose").onclick=()=>{$("adminview").hidden=true};
+$("catalogbtn").onclick=async()=>{if(!currentUser)return;panel.hidden=true;gear.setAttribute("aria-expanded","false");$("catalogsearch").value="";await loadGameSettings();renderCatalog();$("catalogview").hidden=false;$("catalogsearch").focus()};
+$("catalogclose").onclick=()=>{$("catalogview").hidden=true};
+$("catalogsearch").oninput=e=>renderCatalog(e.target.value);
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("catalogview").hidden)$("catalogview").hidden=true});
 document.querySelectorAll("[data-reset-profile]").forEach(button=>{
   button.dataset.originalText=button.textContent;
   button.onclick=async()=>{
